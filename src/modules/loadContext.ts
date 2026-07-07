@@ -1,27 +1,46 @@
 import fs from "fs/promises";
 import path from "path";
 
-export type ContentSignal = {
-  source: string;
-  signal: string;
-};
+export type PlatformBrain = "linkedin" | "instagram-carousel";
 
-export type EngineContext = {
+export type CoreContext = {
   brandBrain: string;
-  signals: ContentSignal[];
+  creativeBrain: string;
+  signals: unknown;
 };
 
-export async function loadContext(): Promise<EngineContext> {
-  const brandBrainPath = path.join(process.cwd(), "src/data/eddy-brain.md");
-  const signalsPath = path.join(process.cwd(), "src/data/sample-signals.json");
+export type PlatformContext = CoreContext & {
+  platformBrain: string;
+};
 
-  const brandBrain = await fs.readFile(brandBrainPath, "utf-8");
-  const signalsRaw = await fs.readFile(signalsPath, "utf-8");
+async function readTextFile(...parts: string[]): Promise<string> {
+  return fs.readFile(path.join(process.cwd(), ...parts), "utf-8");
+}
 
-  const signals = JSON.parse(signalsRaw) as ContentSignal[];
+export async function loadCoreContext(): Promise<CoreContext> {
+  const [brandBrain, creativeBrain, signalsRaw] = await Promise.all([
+    readTextFile("src", "data", "eddy-brain.md"),
+    readTextFile("src", "data", "eddy-creative-brain.md"),
+    readTextFile("src", "data", "sample-signals.json"),
+  ]);
 
   return {
     brandBrain,
-    signals,
+    creativeBrain,
+    signals: JSON.parse(signalsRaw),
+  };
+}
+
+export async function loadPlatformContext(
+  platform: PlatformBrain
+): Promise<PlatformContext> {
+  const [coreContext, platformBrain] = await Promise.all([
+    loadCoreContext(),
+    readTextFile("src", "data", "platform-brains", `${platform}.md`),
+  ]);
+
+  return {
+    ...coreContext,
+    platformBrain,
   };
 }

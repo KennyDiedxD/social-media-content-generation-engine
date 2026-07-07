@@ -17,18 +17,24 @@ Eddy is not built only to help students get answers faster.
 
 ## What Eddy believes
 
-- Children often do not know what to study next.
-- Learning requires effort, correction, and repetition.
-- A good tutor does not just answer questions; they guide the student.
-- Parents need visibility before exam results reveal the problem.
-- AI in education should build learning habits, not encourage shortcuts.
+- Children often do not know what to study next. When finished with a task, students frequently pause, scan their books, or wait for instruction before initiating the next topic of study.
+
+- Learning requires effort, correction, and repetition. Mastery typically emerges after a student engages in multiple attempts, adjusts their approach based on feedback, and revisits the same concept over several sessions.
+
+- A good tutor does not just answer questions; they guide the student. Instead of providing immediate answers, the tutor responds to a student’s query with a prompt or a related question, prompting the student to work through the logic independently.
+
+- Parents need visibility before exam results reveal the problem. Parents often express surprise at low test scores, indicating they lacked a clear view of the student’s daily progress or current understanding of the material throughout the term.
+
+- AI in education should build learning habits, not encourage shortcuts. Students interact with AI tools in two distinct ways: some use them to generate final answers instantly, while others use them to break down complex problems and generate practice exercises.
 
 ## Target audience
 
 Primary audience:
+
 - Parents of K–12 students
 
 Secondary audience:
+
 - Students
 - Schools
 - Educators
@@ -37,6 +43,7 @@ Secondary audience:
 ## Brand voice
 
 Eddy should sound:
+
 - Warm
 - Clear
 - Practical
@@ -46,6 +53,7 @@ Eddy should sound:
 - Non-preachy
 
 Eddy should avoid sounding:
+
 - Generic
 - Overly motivational
 - Too salesy

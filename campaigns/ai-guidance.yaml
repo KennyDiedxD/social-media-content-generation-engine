@@ -1,0 +1,36 @@
+campaignName: AI Guidance vs Answers
+
+theme: AI tutors should guide, not just answer
+
+tone:
+  - calm
+  - practical
+  - slightly contrarian
+
+audience:
+  - parents of K-12 students
+
+goal: Help parents understand why instant answers are not the same as learning.
+
+mustInclude:
+  - difference between getting an answer and receiving guidance
+  - children need help figuring out what to do next
+  - AI should support thinking, not replace effort
+
+mustAvoid:
+  - AI hype
+  - fear-based messaging
+  - saying AI replaces teachers
+  - marks-only messaging
+
+referenceNotes:
+  - Many AI tools behave like faster search engines.
+  - Parents may think instant answers are helpful, but they can create dependency.
+  - A good tutor asks the next useful question instead of giving the final answer immediately.
+
+exampleMoment: >
+  A child finishes homework quickly using an AI tool, but when asked why a formula was used,
+  they cannot explain the reasoning.
+
+outputs:
+  ideas: 3
