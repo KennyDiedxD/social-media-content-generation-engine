@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "generate": "tsx src/index.ts",
+    "generate:weekly": "tsx src/cli/generate.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -13,13 +15,21 @@
   "type": "commonjs",
   "dependencies": {
     "@google/genai": "^2.10.0",
+    "@napi-rs/canvas": "^1.0.9",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
-    "tsx": "^4.23.0",
-    "typescript": "^6.0.3",
+    "express": "^5.2.1",
+    "multer": "^2.4.0",
+    "sharp": "^0.35.4",
     "yaml": "^2.9.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^26.1.0"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^26.1.0",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
   }
 }

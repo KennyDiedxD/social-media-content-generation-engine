@@ -3,3 +3,8 @@ node_modules
 dist
 outputs
 .DS_Store
+src/data/linkedin-auth.json
+# Runtime-generated state
+/uploads/
+/src/data/content-signals.json
+/src/data/post-drafts.json
